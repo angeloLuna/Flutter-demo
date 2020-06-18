@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/src/screens/champion.dart';
 
 class Home extends StatefulWidget {
+  static const String routeName = '/home';
   @override
   HomeState createState() => HomeState();
 }
