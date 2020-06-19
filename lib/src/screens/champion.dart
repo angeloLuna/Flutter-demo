@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 class Champion extends StatefulWidget {
   static const String routeName = '/champion';
   @override
@@ -7,6 +7,8 @@ class Champion extends StatefulWidget {
 }
 
 class ChampionState extends State<Champion> {
+  final auth = FirebaseAuth.instance;
+
   String championName = '';
   int index = 0;
   List<Map> collections = [
@@ -21,6 +23,10 @@ class ChampionState extends State<Champion> {
       setState(() {
         championName = arr['quotes'][index];
       });
+    }
+    @override
+    void initState() {
+      super.initState();
     }
 
   @override
